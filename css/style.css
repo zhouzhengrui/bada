@@ -74,14 +74,14 @@ sub, sup, small {
 
 body {
   color: #333333;
-  font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+  font-family: "SimSun", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 26px;
   background: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+  font-family: "SimSun", Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -117,7 +117,7 @@ h6 {
 button,
 input,
 textarea {
-  font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+  font-family: "SimSun", Arial, Helvetica, sans-serif;
   color: #333333;
 }
 
@@ -160,6 +160,17 @@ a .fontIcon {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
+}
+
+.fontIconLoading {
+  -webkit-animation: iSpin 3s infinite linear;
+  animation: iSpin 3s infinite linear;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  z-index: 0;
+  *display: none;
 }
 
 .whiteBox {
@@ -2887,10 +2898,13 @@ a .fontIcon {
 }
 
 .topBar .topInfoBox ul.topLink {
+  position: relative;
+  z-index: 100;
   border-left: 1px solid #3e414b;
 }
 
 .topBar .topInfoBox ul.topLink li {
+  position: relative;
   border-right: 1px solid #3e414b;
 }
 
@@ -2902,6 +2916,25 @@ a .fontIcon {
 .topBar .topInfoBox ul.topLink li a:hover {
   color: #ffffff;
   background: #ff7e00;
+}
+
+.topBar .topInfoBox ul.topLink li ul {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: #282c37;
+  display: none;
+}
+
+.topBar .topInfoBox ul.topLink li ul li {
+  float: none;
+  border-right: 0;
+  border-top: 1px solid #3e414b;
+}
+
+.topBar .topInfoBox ul.topLink li ul li a {
+  display: block;
 }
 
 .topBar ul li.topLink {
@@ -3237,6 +3270,7 @@ a .fontIcon {
 }
 
 .imageTextShow .imgBox {
+  margin-bottom: 15px;
   border: 1px solid #e5e5e5;
   padding: 4px;
   background: #fff;
@@ -3336,6 +3370,128 @@ a .fontIcon {
   color: #777777;
 }
 
+.imageArray .group {
+  margin-bottom: 30px;
+}
+
+.imageArray .imgBox {
+  border: 1px solid #e5e5e5;
+  padding: 4px;
+  background: #fff;
+}
+
+.imageArray .imgBox div {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.imageArray .imgBox img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.imageArray .textBox .title {
+  margin-top: 10px;
+}
+
+.imageArray .textBox .title a {
+  color: #333333;
+}
+
+.imageArray .textBox .title a:hover {
+  color: #ff7e00;
+}
+
+.imageArray .textBox .text {
+  color: #777777;
+}
+
+.imageCover {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover01 .coverBackground,
+.cover01 .coverBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.cover01 .coverBackground {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background: #282c37;
+}
+
+.cover01 .coverTitle {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  bottom: 100%;
+  margin-left: 5%;
+}
+
+.cover01 .coverButton {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 100%;
+}
+
+.cover01 .coverButton a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 3px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.cover01 .coverButton a:hover {
+  background: #fff;
+  color: #003d79;
+}
+
+.cover01 .coverButton a .fontIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.cover02 .imgBox div {
+  overflow: hidden;
+}
+
+.cover02 .imgBox img {
+  margin-top: 0;
+}
+
+.cover02 .coverBox {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 100%;
+  padding: 15px 0;
+  background: #003d79;
+}
+
+.cover02 .coverTitle {
+  padding: 0 15px;
+  color: #fff;
+}
+
+.cover02 .coverText {
+  color: #bfcfde;
+}
+
 .parallaxBox {
   height: 450px;
   background-position: 50% 0;
@@ -3383,6 +3539,7 @@ a .fontIcon {
 .contactBox .contactForm p {
   color: #777777;
   margin: 10px 0;
+  text-indent: 0;
 }
 
 .contactBox .contactForm h5 {
@@ -3417,7 +3574,7 @@ a .fontIcon {
   color: #777777;
   background: #f9f9f9;
   border: 1px solid #e5e5e5;
-  font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+  font-family: "SimSun", Arial, Helvetica, sans-serif;
 }
 
 .contactBox .contactForm table tbody .input-text:focus {
@@ -3505,7 +3662,7 @@ a .fontIcon {
 
 .footerBar .link02 a {
   display: block;
-  float: right;
+  float: left;
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
@@ -3629,15 +3786,15 @@ a .fontIcon {
   color: #ffffff;
 }
 
-.pageBannerBox .bannerText.pullRight {
+.pageBannerBox .bannerText.pull-right {
   text-align: right;
 }
 
-.pageBannerBox .bannerText.pullRight a {
+.pageBannerBox .bannerText.pull-right a {
   margin: 0 5px;
 }
 
-.pageBannerBox .bannerText.pullRight a:last-child {
+.pageBannerBox .bannerText.pull-right a:last-child {
   margin-right: 0;
 }
 
@@ -3892,7 +4049,7 @@ ul.sideNav li .fontIcon {
 }
 
 .mapBox {
-  height: 400px;
+  height: 450px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -3936,20 +4093,113 @@ ul.pageList li .text {
   color: #777777;
 }
 
-.masonryBox .masonryGroup {
-  width: 230px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.formGroup {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0;
 }
 
-.masonryBox .masonryGroup .imgBox {
-  border: 1px solid #e5e5e5;
-  padding: 4px;
-  background: #fff;
+.formGroup label.field {
+  display: block;
+  float: left;
+  width: 80px;
+  padding-bottom: 5px;
 }
 
-.masonryBox .masonryGroup .imgBox img {
-  max-width: 220px;
+.formGroup label.error {
+  color: #f44336;
+}
+
+.formGroup .inputBox p {
+  padding: 5px 0;
+}
+
+.formGroup .inputBox select {
+  padding: 0 5px;
+  height: 40px;
+  font-size: 12px;
+  margin-right: 10px;
+  min-width: 100%;
+  border: 1px solid #cccccc;
+}
+
+.formGroup .inputBox .checkedBox {
+  float: left;
+  margin-right: 15px;
+  padding-top: 5px;
+}
+
+.formGroup .inputBox .checkedBox input,
+.formGroup .inputBox .checkedBox label {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.formGroup .inputBox .checkedBox input[type=checkbox],
+.formGroup .inputBox .checkedBox input[type=radio] {
+  margin-top: 0;
+}
+
+.formGroup .inputBox .button, .formGroup .inputBox .contactBox .contactForm table tbody .submit input, .contactBox .contactForm table tbody .submit .formGroup .inputBox input {
+  padding: 5px 30px;
+  vertical-align: top;
+}
+
+.formGroup .input {
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  min-width: 100%;
+}
+
+.formGroup .input:focus {
+  border-color: #003d79;
+}
+
+.formGroup .input.disabled {
+  cursor: not-allowed;
+}
+
+.formGroup .input.long {
+  width: 100%;
+  margin-right: 0;
+}
+
+.formGroup .textarea {
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  width: 100%;
+  resize: none;
+}
+
+.formGroup .textarea:focus {
+  border-color: #003d79;
+}
+
+.btnGroup {
+  border-bottom: 0;
+}
+
+.btnGroup .button, .btnGroup .contactBox .contactForm table tbody .submit input, .contactBox .contactForm table tbody .submit .btnGroup input {
+  background: #003d79;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btnGroup .button.gray, .btnGroup .contactBox .contactForm table tbody .submit input.gray, .contactBox .contactForm table tbody .submit .btnGroup input.gray {
+  background: #ccc;
+  border-color: #bfbfbf;
+  color: #666;
+}
+
+.btnGroup .button.gray:hover, .btnGroup .contactBox .contactForm table tbody .submit input.gray:hover, .contactBox .contactForm table tbody .submit .btnGroup input.gray:hover {
+  border-color: #e67100;
+}
+
+.btnGroup .button:hover, .btnGroup .contactBox .contactForm table tbody .submit input:hover, .contactBox .contactForm table tbody .submit .btnGroup input:hover {
+  background: #ff7e00;
+  color: #fff;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -4052,6 +4302,8 @@ ul.pageList li .text {
   padding: 5px;
   cursor: pointer;
   z-index: 8040;
+  width: 34px;
+  height: 34px;
   background: #282c37;
   color: #a9abaf;
   -webkit-border-radius: 50%;
@@ -4068,6 +4320,7 @@ ul.pageList li .text {
   font-size: 24px;
   width: 24px;
   height: 24px;
+  text-decoration: none;
 }
 
 .fancybox-nav {
@@ -4221,7 +4474,25 @@ ul.pageList li .text {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.fancyBoxContentBox {
+  margin-bottom: 15px;
+}
+
+.fancyBoxBtnBox {
+  padding-top: 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
 /*Retina graphics!*/
+@media (max-width: 767px) {
+  .formGroup label.field {
+    padding-top: 5px;
+  }
+  .formGroup .inputBox .button, .formGroup .inputBox .contactBox .contactForm table tbody .submit input, .contactBox .contactForm table tbody .submit .formGroup .inputBox input {
+    margin-top: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .topBar .topInfoBox {
     float: none;
@@ -4234,6 +4505,26 @@ ul.pageList li .text {
   }
   .bottomBar .company {
     text-align: right;
+  }
+  .imageTextShow .imgBox {
+    margin-bottom: 0;
+  }
+  .formGroup label.field {
+    display: block;
+    float: left;
+    width: 120px;
+    text-align: right;
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  .formGroup .inputBox {
+    margin-left: 140px;
+  }
+  .formGroup .inputBox select {
+    min-width: 50%;
+  }
+  .formGroup .inputBox .button, .formGroup .inputBox .contactBox .contactForm table tbody .submit input, .contactBox .contactForm table tbody .submit .formGroup .inputBox input {
+    margin-top: 10px;
   }
 }
 
@@ -4252,5 +4543,11 @@ ul.pageList li .text {
   }
   .contactBox .group {
     margin-bottom: 0;
+  }
+  .formGroup .inputBox .button, .formGroup .inputBox .contactBox .contactForm table tbody .submit input, .contactBox .contactForm table tbody .submit .formGroup .inputBox input {
+    margin-top: 0;
+  }
+  .formGroup .input {
+    min-width: 50%;
   }
 }

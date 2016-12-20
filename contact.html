@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!--style-->
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <!-- jquery -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -37,8 +39,15 @@
                         </li>
                     </ul>
                     <ul class="topLink">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">客户专用平台</a></li>
+                        <li><a href="#" target="_blank">English</a></li>
+                        <li>
+                            <a href="javascript:;">客户专用平台</a>
+                            <ul>
+                                <li><a href="#">防伪码</a></li>
+                                <li><a href="#">估价收费</a></li>
+                                <li><a href="#">投诉与意见</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">联系我们</a></li>
                     </ul>
                 </div>
@@ -68,8 +77,10 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于我们</a>
             <ul class="dropdown-menu">
                 <li><a href="list-news.html">新闻列表</a></li>
+                <li><a href="list-image.html">图片列表</a></li>
                 <li><a href="content.html">内容页</a></li>
                 <li><a href="page.html">单页</a></li>
+                <li><a href="form.html">表单页</a></li>
                 <li><a href="contact.html">联系我们</a></li>
             </ul>
         </li>
@@ -223,14 +234,12 @@
     <div class="container">
         <div class="row">
             <p class="col-xs-12 col-sm-6 copyright">© Copyright 2016 by BaDaGuoRui. All rights reserved</p>
-            <p class="col-xs-12 col-sm-6 company">技术支持 [ <a href="#" target="_blank">上海扑满信息科技</a> ]</p>
+            <!-- <p class="col-xs-12 col-sm-6 company">技术支持 [ <a href="#" target="_blank"></a> ]</p> -->
         </div>
     </div>
 </div>
 
 <!--bottomBar over-->
-<!-- jquery -->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <!-- bootstrap -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- animateIt -->
@@ -243,8 +252,8 @@
 <!-- parallax -->
 <script type="text/javascript" src="js/parallax/parallax.js"></script>
 <!-- masonry -->
-<script type="text/javascript" src="js/masonry/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="js/masonry/imagesloaded.pkgd.min.js"></script>
+<!-- <script type="text/javascript" src="js/masonry/masonry.pkgd.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/masonry/imagesloaded.pkgd.min.js"></script> -->
 <!-- cxScroll -->
 <!-- <script type="text/javascript" src="js/cxScroll/jquery.cxscroll.min.js"></script> -->
 <!-- fancy box -->
